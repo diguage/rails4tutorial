@@ -10,7 +10,7 @@
 
 *.rbc
 capybara-*.html
-.rspec
+# .rspec
 
 # Ignore all logfiles and tempfiles.
 /log
@@ -21,7 +21,8 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
-config/initializers/secret_token.rb
+# config/initializers/secret_token.rb
+.secret
 config/secrets.yml
 
 ## Environment normalisation:
@@ -33,3 +34,7 @@ config/secrets.yml
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+.DS_Store
+.idea
+database.yml
