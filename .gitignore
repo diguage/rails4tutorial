@@ -21,7 +21,8 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
-config/initializers/secret_token.rb
+# config/initializers/secret_token.rb
+.secret
 config/secrets.yml
 
 ## Environment normalisation:
