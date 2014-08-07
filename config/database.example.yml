@@ -1,0 +1,68 @@
+# SQLite
+# gem 'sqlite3', '~> 1.3.9'
+defaults: &defaults
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  database: db/development.sqlite3
+  <<: *defaults
+
+test:
+  database: db/test.sqlite3
+  <<: *defaults
+
+production:
+  database: db/production.sqlite3
+  <<: *defaults
+
+
+#########################################
+# MySQL
+# gem 'mysql2', '~> 0.3.16'
+#defaults: &defaults
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: false
+#  pool: 5
+#  username: root
+#  password: 123456
+#  socket: /var/run/mysqld/mysqld.sock
+#
+#development:
+#  database: development
+#  <<: *defaults
+#
+#test:
+#  database: test
+#  <<: *defaults
+#
+#production:
+#  database: production
+#  <<: *defaults
+
+
+###########################################################
+# PostgreSQL.
+# gem "pg", "~> 0.17.1"
+#
+#defaults: &defaults
+#  adapter: postgresql
+#  encoding: utf8
+#  pool: 5
+#  username: postgres
+#  password: 123456
+#  host: localhost
+#
+#development:
+#  database: development
+#  <<: *defaults
+#
+#test:
+#  database: test
+#  <<: *defaults
+#
+#production:
+#  database: production
+#  <<: *defaults
