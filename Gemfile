@@ -47,6 +47,7 @@ group :development, :test do
   # gem 'rspec-rails', '2.13.1'  # 书中所用版本，以下相同，不再赘述。
   #gem 'rspec-rails', '~> 3.0.2'
   gem 'rspec-rails', '~> 2.14.2'
+  gem 'guard-rspec', '~> 4.3.1'
 end
 
 group :test do
@@ -54,10 +55,21 @@ group :test do
   gem 'selenium-webdriver', '~> 2.42.0'
   # gem 'capybara', '2.1.0'
   gem 'capybara', '~> 2.4.1'
+
+  # 根据系统类型，自动选择合适的Gem；或者使用下面的手动选择Gem
+  if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i  #Windows?
+    gem 'rb-notifu', '0.0.4'
+    gem 'win32console', '1.3.2'
+    gem 'wdm', '0.1.0'
+  elsif RbConfig::CONFIG['target_os'] =~ /linux|unix|freebsd|openbsd|netbsd/i  #Linux?
+    # # gem 'libnotify', '0.8.0'
+    gem 'libnotify', '~> 0.8.3'
+  else   #Mac?
+    gem 'growl', '1.0.3'
+  end
 end
 
 group :production do
   # gem 'pg', '0.15.1'
   gem 'pg', '~> 0.17.1'
 end
-
