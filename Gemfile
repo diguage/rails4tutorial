@@ -47,7 +47,13 @@ group :development, :test do
   # gem 'rspec-rails', '2.13.1'  # 书中所用版本，以下相同，不再赘述。
   #gem 'rspec-rails', '~> 3.0.2'
   gem 'rspec-rails', '~> 2.14.2'
+  # gem 'guard-rspec', '2.5.0'
   gem 'guard-rspec', '~> 4.3.1'
+  gem 'spork-rails', '4.0.0'
+  # gem 'guard-spork', '1.5.0'
+  gem 'guard-spork', '~> 1.5.1'
+  # gem 'childprocess', '0.3.6'
+  gem 'childprocess', '~> 0.5.3'
 end
 
 group :test do
